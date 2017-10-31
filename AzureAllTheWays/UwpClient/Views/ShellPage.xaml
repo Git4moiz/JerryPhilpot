@@ -1,0 +1,21 @@
+﻿<Page
+    x:Class="UwpClient.Views.ShellPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:views="using:UwpClient.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:Template10.Controls"
+    mc:Ignorable="d">
+
+    <controls:NavViewEx Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+                        SettingsPageType="views:SettingsPage">
+
+        <controls:NavViewEx.MenuItems>
+            <NavigationViewItem Icon="Home" Content="List records"
+                                controls:NavProperties.IsStartPage="True"
+                                controls:NavProperties.PageType="views:ListPage" />
+        </controls:NavViewEx.MenuItems>
+
+    </controls:NavViewEx>
+</Page>
