@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
-  <Identity Name="677964f0-261c-48b8-a121-831d9d7b9ba6" Publisher="CN=jerry" Version="1.0.0.0" />
-  <mp:PhoneIdentity PhoneProductId="677964f0-261c-48b8-a121-831d9d7b9ba6" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Identity Name="35527Liquid47.learn2az" Publisher="CN=3EEE984A-A746-4D1B-82C4-1F9317801DDF" Version="1.1.0.0" />
+  <mp:PhoneIdentity PhoneProductId="c66ba80a-d700-4a04-8b34-091bd410c6b1" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
-    <DisplayName>UwpClient</DisplayName>
-    <PublisherDisplayName>jerry</PublisherDisplayName>
+    <DisplayName>learn2az</DisplayName>
+    <PublisherDisplayName>Family Apps</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
   <Dependencies>
@@ -15,7 +15,7 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="UwpClient.App">
-      <uap:VisualElements DisplayName="UwpClient" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="UwpClient" BackgroundColor="white">
+      <uap:VisualElements DisplayName="learn2az" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="UwpClient" BackgroundColor="white">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square310x310Logo="Assets\LargeTile.png" Square71x71Logo="Assets\SmallTile.png">
         </uap:DefaultTile>
         <uap:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="white" />

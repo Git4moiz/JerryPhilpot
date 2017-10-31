@@ -8,20 +8,27 @@ namespace UwpClient
 {
     sealed partial class App : Application
     {
-        private AuthMsaHelper _authHelper;
-
         public App()
         {
-            _authHelper = new AuthMsaHelper();
-            _authHelper.LoginComplete += _authHelper_LoginComplete;
-            _authHelper.LoginFailed += _authHelper_LoginFailed;
+            InitializeComponent();
+        }
+
+        protected override void OnLaunched(LaunchActivatedEventArgs args)
+        {
+            if (args.Kind == ActivationKind.Launch)
+            {
+                var auth = new AuthMsaHelper();
+                auth.LoginComplete += _authHelper_LoginComplete;
+                auth.LoginFailed += _authHelper_LoginFailed;
+                auth.Login();
+            }
         }
 
         private void _authHelper_LoginComplete(object sender, EventArgs e)
         {
             if (Window.Current.Content is Views.ShellPage p)
             {
-                Window.Current.Activate();
+                // empty
             }
             else
             {
@@ -33,14 +40,6 @@ namespace UwpClient
         private async void _authHelper_LoginFailed(object sender, Windows.Security.Authentication.Web.Core.WebTokenRequestStatus e)
         {
             await new MessageDialog(e.ToString()).ShowAsync();
-        }
-
-        protected override void OnLaunched(LaunchActivatedEventArgs args)
-        {
-            if (args.Kind == ActivationKind.Launch)
-            {
-                _authHelper.Login();
-            }
         }
     }
 }
